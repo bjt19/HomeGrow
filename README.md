@@ -283,10 +283,11 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 
 
 ## Future Work <a id="Future"></a>
-1. Larger frames to supoprt more plants
+1. Larger frames to support more plants
 2. Advanced voice recognition system
 3. Integration with weather API
 4. Image recognition for plant diseases
+5. Sourcing alternatives to UPVC pipes to have a biodegradable system
 
 ## Meeting Minutes <a id="Meeting"></a>
 
