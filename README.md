@@ -6,7 +6,6 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 ## Table of contents
 1. [Overview of Design](#Overview)
     1. [Bill of Materials](#Bom)
-    2. [Software Utilized](#Software)
 2. [Physical Build](#Build)
 3. [Hardware](#Hardware)
 4. [Database](#Database)
@@ -54,16 +53,6 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 | 14 | Analogue-to-Digital Converter| 14.10 | 1 | 14.10 |
 | | | | | 232.60 |
 
-### Software Utilized <a id="Software"></a>
-Node-red: <br/>
-description. <br/>
-
-Cloudant: <br/>
-description <br/>
-
-IBM Watson Assistant <br/>
-description <br/>
-
 ## Physical Build <a id="Build"></a>
 <p align="center">
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/overall.jpg">
@@ -76,13 +65,13 @@ circuit diagram <br/>
 pi,sensors,pumps,leds
 
 ## Database <a id="Database"></a>
-2 database are used,  Mnesia database for the data, cloudant stores the nodered flow/watson stuff.
+2 databases are used, an Mnesia database and a Cloudant database.
 
 ### Mnesia <a id="Mnesia"></a>
 example text
 
 ### Cloudant <a id="Cloudant"></a>
-example text
+Cloudant is a non-relational, JSON document database used to store the node-red flows and settings.  
 
 ## User Interface <a id="UI"></a>
 Node-red is used to create a webpage as the user interface. It is a flow-based programming tool built on Node.js, developed by IBM. The node-red app is created and deployed using Cloud Foundry on IBM Cloud.<br/>
@@ -179,7 +168,7 @@ The above flow contains a "plant selection" list where users can choose one of t
     <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/connection_status.PNG">
 </p>
 
-The above flow is used to check the connection status to the database and farm, if data hasnt been received in 30 minutes, a disconnected notification is triggered, if data is received after, the status is changed to connetced.
+The above flow is used to check the connection status to the database and farm, if data hasnt been received in 30 minutes, a disconnected notification is triggered, if data is received after, the status is changed to connected.
 
 ### CSS <a id="CSS"></a>
 ```
