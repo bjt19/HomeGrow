@@ -65,6 +65,9 @@ IBM Watson Assistant <br/>
 description <br/>
 
 ## Physical Build <a id="Build"></a>
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/overall.jpg">
+</p>
 picture of farm <br/>
 3d printed stuff, pipes, anything to do with positioning.
 
