@@ -208,6 +208,10 @@ The above flow is used to check the connection status to the database and farm, 
 A html template node is created with the above CSS code which is applied to the different displays to improve the dashboard.
 
 ## Voice Assistant <a id="Assistant"></a>
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/voice_recognition.drawio.png">
+</p>
+
 IBM's Speech-to-Text, Text-to-Speech and Watson Assistant are used to build the voice recognition system. 
 
 ### Speech-to-Text <a id="Speech-to-Text"></a>
@@ -222,12 +226,6 @@ IBM Watson Assistant uses artificial intelligence to formulate fast, appropriate
 <p align="center">
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/intents.png">
 </p>
-
-<p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/voice_recognition.drawio.png">
-</p>
-
-The connection of the whole voice recognition system is as above. 
 
 ## Integration <a id="Integration"></a>
 
