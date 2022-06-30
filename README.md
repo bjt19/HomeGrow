@@ -269,7 +269,18 @@ Http request...
 Nodes for IBMs cloud services are available on node-red, the service credentials are entered into the nodes which are then used to pass the user chat inputs to the speech-to-text and watson assitant to decipher the message's intent, which then replies the user with the farm conditions comparing the data from the database and the optimal values, the reply is in the form of text and also through the speaker using speech-to-text. 
 
 ## Sustainability and Ethical Report <a id="Sustainability"></a>
-example text
+HomeGrow integrates AI and IoT technology into a traditional vertical hydroponics farming system. Our product is intended to meet the needs of those living in LEDCs without reliable access to drinking water. 
+
+Our product provides the following solutions for sustainability.
+First, we designed a system that recycles water. Water is pumped through the water pump from the reservoir into the pipes. The water then flows through the plant holders back into the reservoir. Since water access is not guaranteed in LEDCs, reducing the usage is water benefits the farmers greatly.
+
+Second, our system uses a special growing material, rockwool, rather than soil to maximize water savings. Furthermore, our self-controlled design makes it possible for a minimum number of farmers to be responsible for the plants. They will only need to top up water and nutrients into the reservoir and nutrients container. 
+On the other hand, to increase crop yield, we use special fertilizer to make plants grow four times faster. In addition, we use a vertical design to save space in order to plant more plants in a limited area. A vertical hydroponics design also helps to reduce the chances of plant diseases, thus increasing the rate of plants surviving to harvest.
+
+By increasing crop yield, the government will not only be able to solve the problem of food shortage but will also be able to sell crops to other countries in order to make money and improve their economic conditions. A country can use the money earned by selling crops to develop its economy. The reduced amount of water and space needed also indicates farmers will have reduced infrastructure and maintenance costs.
+
+The vertical farm is constructed from inexpensive UPVC pipes and electronics. Compared to other current hydroponic systems for sale, our product can be up to two times cheaper, making it more accessible. Furthermore, more pipes can be added easily to upscale the farm. As a result, the cost for a large-scale farm is very reasonable and within the reach of government officials in LEDCs.
+
 
 ## Future Work <a id="Future"></a>
 1. Larger frames to supoprt more plants
