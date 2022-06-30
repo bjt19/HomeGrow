@@ -37,7 +37,7 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 
 ### Bill of Materials <a id="Bom"></a>
 | No.  | Description | Price per Unit (£) | Quantity | Total Price (£) |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
 | 1  | Black Downpipe 2.5m 68mm | 6.81 | 2 | 13.62 |
 | 2  | Half Round 92.5 Degree Offset Bend  | 8 | 26.08 |
 | 3 | Round Pipe Branch 68mm | 6.70 | 5 | 33.50 |
