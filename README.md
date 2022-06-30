@@ -24,6 +24,7 @@ An AI Hydroponics Farm    ---  fill in specification
 
 ## Overview of Design <a id="Overview"></a>
 picture of overall design as done in poster <br/>
+![alt text](https://github.com/bjt19/HomeGrow/blob/main/pictures/example.png?raw=true)
 
 ### Bill of Materials <a id="Bom"></a>
 table of bill of materials.
@@ -57,6 +58,7 @@ example text
 
 ## User Interface <a id="UI"></a>
 uses node red, javascript,html
+import [a link](https://github.com/bjt19/HomeGrow/blob/main/node-red.json) node-red
 
 ### Farm Status Displays <a id="Displays"></a>
 example text
