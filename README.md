@@ -210,7 +210,7 @@ A html template node is created with the above CSS code which is applied to the 
 ## Voice Assistant <a id="Assistant"></a>
 
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/voice_recognition.drawio.png">
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/voice_recognition.png">
 </p>
 
 IBM's Speech-to-Text, Text-to-Speech and Watson Assistant are used to build the voice recognition system. 
