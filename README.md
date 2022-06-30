@@ -36,7 +36,21 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 </p>
 
 ### Bill of Materials <a id="Bom"></a>
-table of bill of materials.
+| No.  | Description | Price per Unit (£) | Quantity | Total Price (£) |
+| ------------- | ------------- |
+| 1  | Black Downpipe 2.5m 68mm | 6.81 | 2 | 13.62 |
+| 2  | Half Round 92.5 Degree Offset Bend  | 8 | 26.08 |
+| 3 | Round Pipe Branch 68mm | 6.70 | 5 | 33.50 |
+| 4 | SEN0244 Gravity Analog TDS Sensor | 11.56 | 1 | 11.56 |
+| 5 | Water Detection Sensor | 1.91 | 1 | 1.91 |
+| 6 | SI1145 Light Sensor | 9.74 | 1 | 9.74 |
+| 7 | LED Lights | 9.12 | 4 | 36.48 |
+| 8 | Immersible Water Pump | 9.01 | 1 | 9.01 |
+| 9 | Peristaltic Pump | 24.43 | 1 | 24.43 |
+| 10 | Reservoir | 31.72 | 1 | 31.72 |
+| 11 | Raspberry Pi Zero | 14 | 1 | 14 |
+| 12 | Rockwool | 4.95 | 1 | 4.95 |
+| 13 | Seeds | 1.50 | 1 | 1.50 |
 
 ### Software Utilized <a id="Software"></a>
 Node-red: <br/>
