@@ -51,7 +51,8 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 | 11 | Raspberry Pi Zero | 14 | 1 | 14 |
 | 12 | Rockwool | 4.95 | 1 | 4.95 |
 | 13 | Seeds | 1.50 | 1 | 1.50 |
-| | | | | 218.50 |
+| 14 | Analogue-to-Digital Converter| 14.10 | 1 | 14.10 |
+| | | | | 232.60 |
 
 ### Software Utilized <a id="Software"></a>
 Node-red: <br/>
