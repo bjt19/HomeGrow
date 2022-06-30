@@ -208,6 +208,7 @@ The above flow is used to check the connection status to the database and farm, 
 A html template node is created with the above CSS code which is applied to the different displays to improve the dashboard.
 
 ## Voice Assistant <a id="Assistant"></a>
+
 <p align="center">
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/voice_recognition.drawio.png">
 </p>
