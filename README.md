@@ -130,7 +130,7 @@ The above flow creates the displays for the current water level, light intensity
     <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/notifications.PNG">
 </p>
 
-The above flow adds notifications to the previous farm status nodes, using the javascript in the "functio"n nodes alongside the "switch" nodes to create the notification logic, resulting in pop-up notifications and a notification log as shown in the ui images above. The light intensity does not have notifications because light intensity control has not been implemented in the raspberry pi, and the duration of light notification logic is different, because it checks every 24hours if the necessary light has been given to the plant rather than notifying the current condition of the farm.
+The above flow adds notifications to the previous farm status nodes, using the javascript in the "function" nodes alongside the "switch" nodes to create the notification logic, resulting in pop-up notifications and a notification log as shown in the ui images above. The light intensity does not have notifications because light intensity control has not been implemented in the raspberry pi, and the duration of light notification logic is different, because it checks every 24hours if the necessary light has been given to the plant rather than notifying the current condition of the farm.
 
 ### Chat <a id="Chat"></a>
 <p align="center">
