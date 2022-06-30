@@ -123,9 +123,7 @@ A node-red app can be created following [this guide](https://developer.ibm.com/t
 After deploying the flows, the /red in the link can be replaced with /ui to access the dashboard, giving the following display:
 
 <p align="center">
-<img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_home.jpg" width="400" height="790">  <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_notifs.jpg" width="400" height="790">
-<img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_custom.jpg" width="400" height="790">  <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_chat.jpg" width="400" height="790">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_settings.jpg" width="400" height="790">
+<img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_home.jpg" width="180" height="395">  <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_notifs.jpg" width="180" height="395"> <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_custom.jpg" width="180" height="395">  <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_chat.jpg" width="180" height="395"> <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_settings.jpg" width="180" height="395">
 </p>
 
 ### Farm Status Displays <a id="Displays"></a>
