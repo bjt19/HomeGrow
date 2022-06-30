@@ -30,8 +30,10 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 10. [Meetings Minutes](#Meeting)
 
 ## Overview of Design <a id="Overview"></a>
-picture of overall design as done in poster <br/>
-![alt text](https://github.com/bjt19/HomeGrow/blob/main/pictures/example.PNG?raw=true)
+<br/>
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/overall_design.PNG">
+</p>
 
 ### Bill of Materials <a id="Bom"></a>
 table of bill of materials.
