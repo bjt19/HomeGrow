@@ -105,8 +105,8 @@ A node-red app can be created following [this guide](https://developer.ibm.com/t
 ``` 
 
 After deploying the flows, the /red in the link can be replaced with /ui to access the dashboard, giving the following display:
-![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_home.jpg?raw=true)
-![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_notifs.jpg?raw=true)
+![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_home.jpg? =250x250)
+![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_notifs.jpg =250x250)
 ![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_custom.jpg?raw=true)
 ![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_chat.jpg?raw=true)
 ![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_settings.jpg?raw=true)
