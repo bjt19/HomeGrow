@@ -233,10 +233,13 @@ Nodes for IBMs cloud services are available on node-red, the service credentials
 example text
 
 ## Future Work <a id="Future"></a>
-example text
+1. Larger frames to supoprt more plants
+2. Advanced voice recognition system
+3. Integration with weather API
+4. Image recognition for plant diseases
 
 ## Meeting Minutes <a id="Meeting"></a>
--table of meetings?
+
 
 
 
