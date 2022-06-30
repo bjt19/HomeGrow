@@ -1,6 +1,7 @@
 # HomeGrow
-An AI Hydroponics Farm    ---  fill in specification
+Homegrow is a hydroponics system utilizing IBM's AI and Cloud technology alongside a raspberry pi and sensors to automate the farming process. 
 
+The product is designed to be space-efficient, water-efficient, and easy to use for farms in LEDC's without reliable access to water.
 
 ## Table of contents
 1. [Overview of Design](#Overview)
@@ -21,9 +22,12 @@ An AI Hydroponics Farm    ---  fill in specification
     7. [CSS](#CSS)
 6. [Voice Assistant](#Assistant)
 7. [Integration](#Integration)
+    1. [Database <-> Pi](#D2P)
+    2. [Database <-> Node-red](#D2N)
+    3. [UI <-> Voice Assistant](#U2V)
 8. [Sustainability and Ethical Report](#Sustainability)
-8. [Future Work](#Future)
-8. [Meetings Minutes](#Meeting)
+9. [Future Work](#Future)
+10. [Meetings Minutes](#Meeting)
 
 ## Overview of Design <a id="Overview"></a>
 picture of overall design as done in poster <br/>
@@ -119,14 +123,14 @@ After deploying the flows, the /red in the link can be replaced with /ui to acce
     <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/data_display.PNG">
 </p>
 
-The above flow creates the displays for the current water level, light intensity, nutrient level and duration of light of the farm. There are inject and random nodes which are used as placeholders for the database during testing, and link nodes which create the connection to the http request flow to get data from the database.
+The above flow creates the displays for the current water level, light intensity, nutrient level and duration of light of the farm. There are "inject" and "random" nodes which are used as placeholders for the database during testing, and link nodes which create the connection to the http request flow to get data from the database.
 
 ### Notifications <a id="Notifications"></a>
 <p align="center">
     <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/notifications.PNG">
 </p>
 
-The above flow adds notifications to the previous farm status nodes, using the javascript in the function nodes alongside the switch nodes to create the notification logic, resulting in pop-up notifications and a notification log as shown in the ui images above. The light intensity does not have notifications because light intensity control has not been implemented in the raspberry pi, and the duration of light notification logic is different, because it checks every 24hours if the necessary light has been given to the plant rather than notifying the current condition of the farm.
+The above flow adds notifications to the previous farm status nodes, using the javascript in the "functio"n nodes alongside the "switch" nodes to create the notification logic, resulting in pop-up notifications and a notification log as shown in the ui images above. The light intensity does not have notifications because light intensity control has not been implemented in the raspberry pi, and the duration of light notification logic is different, because it checks every 24hours if the necessary light has been given to the plant rather than notifying the current condition of the farm.
 
 ### Chat <a id="Chat"></a>
 <p align="center">
@@ -151,7 +155,7 @@ The above flow contains a "plant selection" list where users can choose one of t
 
 ### Connection Status <a id="Connection"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/custom_types.PNG">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/connection_status.PNG">
 </p>
 
 The above flow is used to check the connection status to the database and farm, if data hasnt been received in 30 minutes, a disconnected notification is triggered, if data is received after, the status is changed to connetced.
@@ -201,20 +205,27 @@ The above flow is used to check the connection status to the database and farm, 
 
 A html template node is created with the above CSS code which is applied to the different displays to improve the dashboard.
 
-
-
 ## Voice Assistant <a id="Assistant"></a>
 watson assistant, speech to text,etc
 
 ## Integration <a id="Integration"></a>
-MQTT: <br/>
-pi <-> database <br/>
 
-Node-red: <br/>
-ai -> ui <br/>
+### Database <-> Pi <a id="D2P"></a>
 
-HTTP: <br/>
-ui + ai <-> database <br/>
+### Database <-> Node-red <a id="D2P"></a>
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/database_connections.PNG">
+</p>
+
+Http request...
+
+
+### UI <-> Voice Assistant <a id="U2V"></a>
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/watson_assitant.PNG">
+</p>
+
+Nodes for IBMs cloud services are available on node-red, the service credentials are entered into the nodes which are then used to pass the user chat inputs to the speech-to-text and watson assitant to decipher the message's intent, which then replies the user with the farm conditions comparing the data from the database and the optimal values, the reply is in the form of text and also throught the speaker using speech-to-text. 
 
 ## Sustainability and Ethical Report <a id="Sustainability"></a>
 example text
