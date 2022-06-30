@@ -12,10 +12,11 @@ An AI Hydroponics Farm    ---  fill in specification
     1. [Mnesia](#Mnesia)
     2. [Cloudant](#Cloudant)
 5. [User Interface](#UI)
-    1. [Farm Status Displays](#Displays)
-    2. [Notifications](#Notifications)
-    3. [Chat](#Chat)
-    4. [CSS](#CSS)
+    1. [Importing the Flow](#Flow)
+    2. [Farm Status Displays](#Displays)
+    3. [Notifications](#Notifications)
+    4. [Chat](#Chat)
+    5. [CSS](#CSS)
 6. [Voice Assistant](#Assistant)
 7. [Integration](#Integration)
 8. [Sustainability and Ethical Report](#Sustainability)
@@ -57,8 +58,14 @@ example text
 example text
 
 ## User Interface <a id="UI"></a>
-uses node red, javascript,html <br/>
-import [node-red](https://github.com/bjt19/HomeGrow/blob/main/node-red.json) node-red<br/>
+Node-red is used to create a webpage as the user interface. It is a flow-based programming tool built on Node.js, developed by IBM. The node-red app is created and deployed using Cloud Foundry on IBM Cloud.<br/>
+
+The full documentation on node-red can be found [here](https://nodered.org/docs/)<br/>
+
+### Importing the Flow <a id="Flow"></a>
+The flows for the project can be found [here](https://github.com/bjt19/HomeGrow/blob/main/node-red.json)<br/> to be imported after the app is created.
+
+A node-red app can be created following [this guide](https://developer.ibm.com/tutorials/how-to-create-a-node-red-starter-application/) and changing the package.json file in its gitlab source to include the required libraries as shown below:
 
 ```javascript
 {
@@ -96,6 +103,13 @@ import [node-red](https://github.com/bjt19/HomeGrow/blob/main/node-red.json) nod
     } 
 } 
 ``` 
+
+After deploying the flows, the /red in the link can be replaced with /ui to access the dashboard, giving the following display:
+![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_home.jpg?raw=true)
+![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_notifs.jpg?raw=true)
+![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_custom.jpg?raw=true)
+![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_chat.jpg?raw=true)
+![alt text](https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_settings.jpg?raw=true)
 
 ### Farm Status Displays <a id="Displays"></a>
 example text
