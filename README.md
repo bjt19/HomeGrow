@@ -67,7 +67,7 @@ example text
 example text
 
 ### Chat <a id="Chat"></a>
-example text
+<code>example text<code>
 
 ### CSS <a id="CSS"></a>
 example text
