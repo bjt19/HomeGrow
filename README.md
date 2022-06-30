@@ -39,7 +39,7 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 | No.  | Description | Price per Unit (£) | Quantity | Total Price (£) |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 1  | Black Downpipe 2.5m 68mm | 6.81 | 2 | 13.62 |
-| 2  | Half Round 92.5 Degree Offset Bend  | 8 | 26.08 |
+| 2  | Half Round 92.5 Degree Offset Bend | 3.26 | 8 | 26.08 |
 | 3 | Round Pipe Branch 68mm | 6.70 | 5 | 33.50 |
 | 4 | SEN0244 Gravity Analog TDS Sensor | 11.56 | 1 | 11.56 |
 | 5 | Water Detection Sensor | 1.91 | 1 | 1.91 |
@@ -51,6 +51,7 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 | 11 | Raspberry Pi Zero | 14 | 1 | 14 |
 | 12 | Rockwool | 4.95 | 1 | 4.95 |
 | 13 | Seeds | 1.50 | 1 | 1.50 |
+| | | | | 218.50 |
 
 ### Software Utilized <a id="Software"></a>
 Node-red: <br/>
