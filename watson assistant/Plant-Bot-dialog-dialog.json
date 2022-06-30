@@ -1,0 +1,354 @@
+{
+  "intents": [
+    {
+      "intent": "condition",
+      "examples": [
+        {
+          "text": "how is environment"
+        },
+        {
+          "text": "how is growth"
+        },
+        {
+          "text": "How's the condition"
+        },
+        {
+          "text": "How's the enviornment"
+        },
+        {
+          "text": "How's the growth"
+        },
+        {
+          "text": "How's the plants doing?"
+        },
+        {
+          "text": "what is the condition"
+        }
+      ],
+      "description": "Ask about condition"
+    },
+    {
+      "intent": "endings",
+      "examples": [
+        {
+          "text": "great answer"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "that was really helpful"
+        },
+        {
+          "text": "that was very helpful"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hello how are you"
+        },
+        {
+          "text": "how are you"
+        },
+        {
+          "text": "how are you doing"
+        },
+        {
+          "text": "what's up"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "light",
+      "examples": [
+        {
+          "text": "are the plants getting enough light"
+        },
+        {
+          "text": "check light intensity"
+        },
+        {
+          "text": "check light intensity level"
+        },
+        {
+          "text": "check the light level"
+        },
+        {
+          "text": "How's the light"
+        },
+        {
+          "text": "is it bright enough"
+        },
+        {
+          "text": "is it too dark"
+        },
+        {
+          "text": "what is the light intensity"
+        },
+        {
+          "text": "What's the light intensity"
+        }
+      ],
+      "description": "ask about light"
+    },
+    {
+      "intent": "moisture",
+      "examples": [
+        {
+          "text": "check water level"
+        },
+        {
+          "text": "Do you need some water"
+        },
+        {
+          "text": "How's the water"
+        },
+        {
+          "text": "How's the water level"
+        },
+        {
+          "text": "What is the level of the water"
+        },
+        {
+          "text": "What is the water level"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "nutrient",
+      "examples": [
+        {
+          "text": "Are you hungry"
+        },
+        {
+          "text": "How's the nutrient"
+        },
+        {
+          "text": "How's the nutrients"
+        },
+        {
+          "text": "How's the soil"
+        },
+        {
+          "text": "Is the soil nutritious enough"
+        },
+        {
+          "text": "What is the solid level"
+        }
+      ],
+      "description": "Ask about nutrients"
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1654870268394",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "endings",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You're welcome!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#endings",
+      "dialog_node": "node_3_1655933173717",
+      "previous_sibling": "node_6_1655930727270"
+    },
+    {
+      "type": "standard",
+      "title": "Light",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The plants are receiving a good amount of light"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#light",
+      "dialog_node": "node_4_1654870268394",
+      "previous_sibling": "node_5_1654870203925"
+    },
+    {
+      "type": "standard",
+      "title": "Nutrients",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The amount of nutrient is sufficient"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#nutrient",
+      "dialog_node": "node_5_1654870203925",
+      "previous_sibling": "node_7_1654870043383"
+    },
+    {
+      "type": "standard",
+      "title": "moisture",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The water level is adequate."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#moisture",
+      "dialog_node": "node_6_1655930505654",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "greetings",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am doing great! What would you like to know today?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#greetings",
+      "dialog_node": "node_6_1655930727270",
+      "previous_sibling": "node_6_1655930505654"
+    },
+    {
+      "type": "standard",
+      "title": "Condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The plants are doing great!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#condition",
+      "dialog_node": "node_7_1654870043383",
+      "previous_sibling": "node_3_1655933173717"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Plant Bot-dialog",
+  "language": "en",
+  "description": "Tell you about the plant's conditions"
+}
