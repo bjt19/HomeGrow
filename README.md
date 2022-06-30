@@ -208,7 +208,26 @@ The above flow is used to check the connection status to the database and farm, 
 A html template node is created with the above CSS code which is applied to the different displays to improve the dashboard.
 
 ## Voice Assistant <a id="Assistant"></a>
-watson assistant, speech to text,etc
+IBM's Speech-to-Text, Text-to-Speech and Watson Assistant are used to build the voice recognition system. 
+
+### Speech-to-Text <a id="Speech-to-Text"></a>
+IBM Speech-to-Text is an API cloud service that utilises AI-powered speech recognition and transcription to convert speech to text. The language chosen is English but it is also possible to choose other languages such as Arabic, French and Korean. 
+
+### Text-to-Speech <a id="Text-to-Speech"></a>
+IBM Text-to-Speech is an API cloud service that allows you to convert text to speech using natural-sounding voices. Male or female voices can be chosen.
+
+### Watson Assistant <a id="Watson Assistant"></a>
+IBM Watson Assistant uses artificial intelligence to formulate fast, appropriate and accurate responses across any application. By detecting the user's intents, the virtual agent can carry out actions that can be set within the workspace such as responding using dialog that was preset. The main intents for this system are water, light, nutrients and condition as the main application for thie voice recognition feature is for the user to understand the condition of the plants. Possible user examples are added for each intent.
+
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/intents.png">
+</p>
+
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/voice_recognition.drawio.png">
+</p>
+
+The connection of the whole voice recognition system is as above. 
 
 ## Integration <a id="Integration"></a>
 
@@ -227,7 +246,7 @@ Http request...
     <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/watson_assitant.PNG">
 </p>
 
-Nodes for IBMs cloud services are available on node-red, the service credentials are entered into the nodes which are then used to pass the user chat inputs to the speech-to-text and watson assitant to decipher the message's intent, which then replies the user with the farm conditions comparing the data from the database and the optimal values, the reply is in the form of text and also throught the speaker using speech-to-text. 
+Nodes for IBMs cloud services are available on node-red, the service credentials are entered into the nodes which are then used to pass the user chat inputs to the speech-to-text and watson assitant to decipher the message's intent, which then replies the user with the farm conditions comparing the data from the database and the optimal values, the reply is in the form of text and also through the speaker using speech-to-text. 
 
 ## Sustainability and Ethical Report <a id="Sustainability"></a>
 example text
