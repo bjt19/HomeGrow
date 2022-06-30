@@ -58,7 +58,44 @@ example text
 
 ## User Interface <a id="UI"></a>
 uses node red, javascript,html <br/>
-import [node-red](https://github.com/bjt19/HomeGrow/blob/main/node-red.json) node-red
+import [node-red](https://github.com/bjt19/HomeGrow/blob/main/node-red.json) node-red<br/>
+
+<code>
+{
+    "name": "node-red-app",
+    "version": "1.1.3",
+    "dependencies": {
+        "node-red-dashboard": "3.1.7",
+        "node-red-node-ui-microphone": "0.3.x",
+        "node-red-contrib-mic": "0.0.1",
+        "node-red-node-random": "0.4.0",
+        "node-red-contrib-scx-ibmiotapp": "0.0.49",  
+        "node-red-contrib-cloudantplus": "2.0.5",
+        "node-red-contrib-postgresql": "0.10.1",
+        "node-red-contrib-httpauth": "1.0.12",
+        "node-red-node-email": "1.15.1", 
+        "node-red-contrib-chat": "1.0.0", 
+        "@ibm-cloud/cloudant": "^0.0.25",
+        "bcrypt": "^5.0.1",
+        "body-parser": "1.x",
+        "express": "4.x",
+        "http-shutdown": "1.2.2",
+        "ibm-cloud-env": "^0",
+        "node-red": "^2.2.2",
+        "node-red-contrib-ibm-db2": "0.x",
+        "node-red-node-cf-cloudant": "0.x",
+        "node-red-node-openwhisk": "0.x",
+        "node-red-node-watson": "0.x",
+        "node-red-nodes-cf-sqldb-dashdb": "0.x"
+    },
+    "scripts": {
+        "start": "node --max-old-space-size=160 index.js --settings ./bluemix-settings.js -v"
+    },
+    "engines": {
+        "node": "14.x"
+    }
+}
+<code>
 
 ### Farm Status Displays <a id="Displays"></a>
 example text
@@ -67,7 +104,7 @@ example text
 example text
 
 ### Chat <a id="Chat"></a>
-<code>example text<code>
+example text
 
 ### CSS <a id="CSS"></a>
 example text
