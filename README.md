@@ -16,7 +16,9 @@ An AI Hydroponics Farm    ---  fill in specification
     2. [Farm Status Displays](#Displays)
     3. [Notifications](#Notifications)
     4. [Chat](#Chat)
-    5. [CSS](#CSS)
+    5. [Custom Types](#Custom)
+    6. [Connection Status](#Connection)
+    7. [CSS](#CSS)
 6. [Voice Assistant](#Assistant)
 7. [Integration](#Integration)
 8. [Sustainability and Ethical Report](#Sustainability)
@@ -60,10 +62,10 @@ example text
 ## User Interface <a id="UI"></a>
 Node-red is used to create a webpage as the user interface. It is a flow-based programming tool built on Node.js, developed by IBM. The node-red app is created and deployed using Cloud Foundry on IBM Cloud.<br/>
 
-The full documentation on node-red can be found [here](https://nodered.org/docs/)<br/>
+The full documentation on node-red can be found [here](https://nodered.org/docs/).<br/>
 
 ### Importing the Flow <a id="Flow"></a>
-The flows for the project can be found [here](https://github.com/bjt19/HomeGrow/blob/main/node-red.json)<br/> to be imported after the app is created.
+The flows for the project can be found [here](https://github.com/bjt19/HomeGrow/blob/main/node-red.json), to be imported after the app is created.
 
 A node-red app can be created following [this guide](https://developer.ibm.com/tutorials/how-to-create-a-node-red-starter-application/) and changing the package.json file in its gitlab source to include the required libraries as shown below:
 
@@ -113,16 +115,93 @@ After deploying the flows, the /red in the link can be replaced with /ui to acce
 </p>
 
 ### Farm Status Displays <a id="Displays"></a>
-example text
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/data_display.PNG">
+</p>
+
+The above flow creates the displays for the current water level, light intensity, nutrient level and duration of light of the farm. There are inject and random nodes which are used as placeholders for the database during testing, and link nodes which create the connection to the http request flow to get data from the database.
 
 ### Notifications <a id="Notifications"></a>
-example text
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/notifications.PNG">
+</p>
+
+The above flow adds notifications to the previous farm status nodes, using the javascript in the function nodes alongside the switch nodes to create the notification logic, resulting in pop-up notifications and a notification log as shown in the ui images above. The light intensity does not have notifications because light intensity control has not been implemented in the raspberry pi, and the duration of light notification logic is different, because it checks every 24hours if the necessary light has been given to the plant rather than notifying the current condition of the farm.
 
 ### Chat <a id="Chat"></a>
-example text
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/chat_inputs.PNG">
+</p>
+
+The above flow creates text and microphone inputs which are then sent to the voice assistant to get a response, and also creates a log of previous messages as shown in the ui image above. 
+
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/settings.PNG">
+</p>
+
+The above flow creates a button input for enabling or disabling the speaker when using the chat.
+
+### Custom Types <a id="Custom"></a>
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/custom_types.PNG">
+</p>
+
+
+The above flow contains a "plant selection" list where users can choose one of the preset plant types and hence the farms optimal values. These values are then displayed on the Home page as text outputs alongside the farm status. There are also 2 "custom plant settings" forms which users can use to add custom plant types and their optimal values. After adding custom plants types, they are saved as flow variables, added to the plant list, and displayed in the custom tab where they can also be deleted. The flow also contains some "ui control" nodes which are used to hide or show the forms so the dashboard is less clutered.
+
+### Connection Status <a id="Connection"></a>
+<p align="center">
+    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/custom_types.PNG">
+</p>
+
+The above flow is used to check the connection status to the database and farm, if data hasnt been received in 30 minutes, a disconnected notification is triggered, if data is received after, the status is changed to connetced.
 
 ### CSS <a id="CSS"></a>
-example text
+```
+<style>
+    .blue {
+        background-color: #7FFFD4 !important;
+        color: black !important;
+    }
+    .green {
+        background-color: #7FFF00 !important;
+        color: black !important;
+    }
+    .yellow {
+        background-color: #FFD700 !important;
+        color: black !important;
+    }
+    .white{
+        background-color: #F8F8FF !important;
+        color: black !important;
+    }
+    .crimson{
+        background-color: #DC143C !important;
+        color: black !important;
+    }
+    .assist_msg{
+        background-color: #ADD8E6 !important;
+        color: black !important;
+    }
+    .usr_msg{
+        background-color: #ADD8E6 !important;
+        color: black !important;
+    }
+    .text_border{
+        border-top: 2px green !important;
+    }
+    .welcome{
+        color: #228B22 !important;
+        font-size: 150% !important;
+        font-family: "Times New Roman" !important;
+    }
+
+</style>
+```
+
+A html template node is created with the above CSS code which is applied to the different displays to improve the dashboard.
+
+
 
 ## Voice Assistant <a id="Assistant"></a>
 watson assistant, speech to text,etc
