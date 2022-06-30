@@ -228,6 +228,8 @@ IBM Watson Assistant uses artificial intelligence to formulate fast, appropriate
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/intents.png">
 </p>
 
+In the Node-RED flow, user intents are extracted from the Watson Assistant. Based on the intent, the relevant sensor value is extracted from the database and compared against the optimal threshold. For instance, if the user wants to check the light level of the LED lights, the intent 'light' will be detected by Watson Assistant and hence the latest light sensor value is retrieved from the database and checked against the optimal light level needed by the particular type of plant. An appropriate response is given depending on whether there is enough light.
+
 ## Integration <a id="Integration"></a>
 
 ### Database <-> Pi <a id="D2P"></a>
