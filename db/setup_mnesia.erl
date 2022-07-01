@@ -4,7 +4,9 @@
 
 init() ->
   ok = mnesia:create_schema([node()]),
-  ok = mnesia:start().
+  ok = mnesia:start(),
+  ok = create(),
+  halt(0).
 
 create() ->
   {atomic, ok} = mnesia:create_table(user, [{attributes, record_info(fields, user)},
