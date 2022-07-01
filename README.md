@@ -102,8 +102,18 @@ Each of the 3 systems runs as a supervised and fault-tolerant Erlang application
 
 ### Database
 The database application is an Erlang [generic server](https://erlang.org/doc/man/gen_server), and is a relational database. There are 3 main tables in the database: `user`, which stores a registered user of our services and their hashed authorisation/password; `system`, which stores each hydroponic system, what it is growing, its owner, and the led/pump configuration; and `reading`, which stores each sensor reading from a hydroponic system. There is also a `plant` table for storing default settings and names for each type of plant a user may be growing in their system.
-<img src="pictures/relational_tables.png"> 
+<img src="pictures/relational_tables.png">
 
+The generic server receives "calls" (messages which expect a response) and casts (asynchronous messages which don't expect a response) from either the MQTT app or the HTTPS app and performs transactions on the database accordingly. These messages can take the following form:
+
+Description                        | Format | Response
+------------------------------------ | --------------------- | ----------
+Check password matches for a user | `{check_auth, :User:, :Pass:}` | `authorised` or `not_authorised`
+Register a user | `{register, :User:, :Pass:}` | `{error, name_in_use}` or `ok`
+Get the latest reading of a given type | `{:Reading:, #{id := :Id:, user := :User:}}` | `{error, no_sysid}` or `ok`
+Get data matching parameters | `{get_data, #{since := :S:, before := :B:, count := :C:, id := :Id:, user := :User:}}` | `{ok, :Readings:}`
+Claim a system | `{claim, :User:, :SysId:}` | `{201, ""}` or `{409, ""}`
+Add a reading | `{reading, {:ReadingType:, :SerialNumber:}, :Reading:}` | none
 
 ### HTTPS
 
