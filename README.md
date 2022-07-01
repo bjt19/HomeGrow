@@ -55,16 +55,14 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 
 ## Physical Build <a id="Build"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/overall.jpg"> <br>
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image016.jpg"> <br>
     Picture of the Farm <br>
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/schematic_prototype.png"> <br>
-    Schematic for Physical System of the Farm <br>
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/plant_holder.jpeg"> <br>
-    3D-Printed Plant Holder <br>
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/pipe_stopper.jpeg"> <br>
-    3D-Printed Pipe Stopper <br>
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/water_stopper.jpeg"> <br>
-    3D-Printed Water Level Barrier <br>
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image018.png"> 
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image020.png"> <br>
+    &emsp;Schematic for Physical System of the Farm &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3D-Printed Plant Holder <br>
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image022.png"> 
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image024.png"><br>
+    3D-Printed Pipe Stopper&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3D-Printed Water Level Barrier <br><br>
 </p>
 1.	Measure the overlap distance between the 90° joints & UPVC pipes and tee joints & UPVC pipes <br>
 2.	Drill 4 rectangular holes with the size of 5cm x 5.1cm on each of the 0.5m UPVC pipes <br>
@@ -303,7 +301,7 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 
 ![image](https://user-images.githubusercontent.com/59923913/176884025-70e04a98-7b56-4861-aafc-54c4658fb033.png)
 
-![image](https://user-images.githubusercontent.com/59923913/176884325-f7c9ea89-48c4-46f6-a1c8-bb96e34685e3.png)
+![image](https://user-images.githubusercontent.com/59923913/176894984-427b2cf7-e787-4396-80d2-43693faab744.png)
 
 ![image](https://user-images.githubusercontent.com/59923913/176884393-16f42c55-adcd-44ba-a32a-05227f7de6f0.png)
 
@@ -315,6 +313,12 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 
 ![image](https://user-images.githubusercontent.com/59923913/176884729-55d30d0c-831e-4737-ab97-a176b356ed46.png)
 
+
+## Gantt Chart <a id="Meeting"></a>
+
+<img width="1402" alt="Screenshot 2022-07-01 at 22 05 30" src="https://user-images.githubusercontent.com/59923913/176910425-1f200f6e-4702-42a2-ad44-dbafa913a037.png">
+<img width="1402" alt="Screenshot 2022-07-01 at 22 05 39" src="https://user-images.githubusercontent.com/59923913/176910436-8736228d-d631-47eb-bb65-94b0a0046edc.png">
+<img width="1401" alt="Screenshot 2022-07-01 at 22 05 46" src="https://user-images.githubusercontent.com/59923913/176910447-109a6f32-d54f-48c9-be67-f76a208b3e22.png">
 
 
 
