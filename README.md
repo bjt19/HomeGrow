@@ -316,6 +316,9 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 
 ## Gantt Chart <a id="Meeting"></a>
 
+<img width="1402" alt="Screenshot 2022-07-01 at 22 05 30" src="https://user-images.githubusercontent.com/59923913/176910425-1f200f6e-4702-42a2-ad44-dbafa913a037.png">
+<img width="1402" alt="Screenshot 2022-07-01 at 22 05 39" src="https://user-images.githubusercontent.com/59923913/176910436-8736228d-d631-47eb-bb65-94b0a0046edc.png">
+<img width="1401" alt="Screenshot 2022-07-01 at 22 05 46" src="https://user-images.githubusercontent.com/59923913/176910447-109a6f32-d54f-48c9-be67-f76a208b3e22.png">
 
 
 
