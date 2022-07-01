@@ -59,10 +59,12 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
     Picture of the Farm <br>
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/schematic_prototype.png"> <br>
     Schematic for Physical System of the Farm <br>
+    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/plant_holder.jpeg"> <br>
+    3D-Printed Plant Holder <br>
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/pipe_stopper.jpeg"> <br>
-    3D-Printed Pipe Stopper
+    3D-Printed Pipe Stopper <br>
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/water_stopper.jpeg"> <br>
-    3D-Printed Water Level Barrier
+    3D-Printed Water Level Barrier <br>
 </p>
 1.	Measure the overlap distance between the 90° joints & UPVC pipes and tee joints & UPVC pipes <br>
 2.	Drill 4 rectangular holes with the size of 5cm x 5.1cm on each of the 0.5m UPVC pipes <br>
