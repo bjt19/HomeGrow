@@ -103,7 +103,9 @@ Claim a system | `{claim, :User:, :SysId:}` | `{201, ""}` or `{409, ""}`
 Add a reading | `{reading, {:ReadingType:, :SerialNumber:}, :Reading:}` | none
 
 ### HTTPS
-The HTTP endpoints can be found in the [OpenAI documentation](ai-hydroponics.json). The server operates under the Inets application distributed as part of the Open Telecom Platform. A custom callback module is used to process the HTTP requests, decoding them  and then sending the processed requests such as authorisation and the actual request to get data on to the database server. The same callback module then formats the responses using the "Jiffy" library, sets the appropriate headers and sends the response back to Inets.
+The HTTP endpoints can be found in the [OpenAPI documentation](ai-hydroponics.json). A tool such as the [42Crunch VSCode extension](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) can be used to view the endpoints and even send sample requests to the server.
+
+The server operates through the Inets application distributed as part of the Open Telecom Platform. A custom callback module is used to process the HTTP requests, decoding them  and then sending the processed requests such as authorisation and the actual request to get data on to the database server. The same callback module then formats the responses using the "Jiffy" library, sets the appropriate headers and sends the response back to Inets.
 
 HTTPS was chosen over HTTP for the HTTP server due to the handling of users' passwords and potentially other sensitive data, as it would be unwise for this to be travelling unencrypted even between 2 private servers. Certbot/Let's Encrypt was used to generate a SSL certificate for a domain for the database server. Although much of the config was manual, the extra work to set it up minimal and therefore well worth doing.
 
