@@ -22,9 +22,8 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
     7. [CSS](#CSS)
 6. [Voice Assistant](#Assistant)
 7. [Integration](#Integration)
-    1. [Database <-> Pi](#D2P)
-    2. [Database <-> Node-red](#D2N)
-    3. [UI <-> Voice Assistant](#U2V)
+    1. [Database <-> Node-red](#D2N)
+    2. [UI <-> Voice Assistant](#U2V)
 8. [Sustainability and Ethical Report](#Sustainability)
 9. [Future Work](#Future)
 10. [Meetings Minutes](#Meeting)
@@ -289,14 +288,12 @@ In the Node-RED flow, user intents are extracted from the Watson Assistant. Base
 
 ## Integration <a id="Integration"></a>
 
-### Database <-> Pi <a id="D2P"></a>
-
 ### Database <-> Node-red <a id="D2P"></a>
 <p align="center">
     <img src="pictures/database_connections.PNG">
 </p>
 
-Http request...
+Http nodes are used in node-red to create the http requests to the database.
 
 
 ### UI <-> Voice Assistant <a id="U2V"></a>
