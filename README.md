@@ -304,6 +304,10 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 ![image](https://user-images.githubusercontent.com/59923913/176884025-70e04a98-7b56-4861-aafc-54c4658fb033.png)
 
 
+![image](https://user-images.githubusercontent.com/59923913/176884325-f7c9ea89-48c4-46f6-a1c8-bb96e34685e3.png)
+
+
+![image](https://user-images.githubusercontent.com/59923913/176884393-16f42c55-adcd-44ba-a32a-05227f7de6f0.png)
 
 
 
