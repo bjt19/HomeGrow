@@ -9,8 +9,9 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 2. [Physical Build](#Build)
 3. [Hardware](#Hardware)
 4. [Database](#Database)
-    1. [Mnesia](#Mnesia)
-    2. [Cloudant](#Cloudant)
+    1. [Database](#Database2)
+    2. [HTTPS](#Mnesia)
+    3. [MQTT](#Cloudant)
 5. [User Interface](#UI)
     1. [Importing the Flow](#Flow)
     2. [Farm Status Displays](#Displays)
@@ -87,7 +88,7 @@ The database for the system uses [Mnesia](https://erlang.org/doc/man/mnesia), wh
 
 Each of the 3 systems runs as a supervised and fault-tolerant Erlang application on its own OTP Node within its own locked-down UNIX user account, with only necessary permissions within the host system, which allows for each subsystem to run in full isolation, as well as for increased security.
 
-### Database
+### Database <a id="Database2"></a>
 The database application is an Erlang [generic server](https://erlang.org/doc/man/gen_server), and is a relational database. There are 3 main tables in the database: `user`, which stores a registered user of our services and their hashed authorisation/password; `system`, which stores each hydroponic system, what it is growing, its owner, and the led/pump configuration; and `reading`, which stores each sensor reading from a hydroponic system. There is also a `plant` table for storing default settings and names for each type of plant a user may be growing in their system.
 <img src="pictures/relational_tables.png">
 
@@ -102,17 +103,26 @@ Get data matching parameters | `{get_data, #{since := :S:, before := :B:, count 
 Claim a system | `{claim, :User:, :SysId:}` | `{201, ""}` or `{409, ""}`
 Add a reading | `{reading, {:ReadingType:, :SerialNumber:}, :Reading:}` | none
 
-### HTTPS
+### HTTPS <a id="HTTPS"></a>
 The HTTP endpoints can be found in the [OpenAPI documentation](ai-hydroponics.json). A tool such as the [42Crunch VSCode extension](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) can be used to view the endpoints and even send sample requests to the server.
 
 The server operates through the Inets application distributed as part of the Open Telecom Platform. A custom callback module is used to process the HTTP requests, decoding them  and then sending the processed requests such as authorisation and the actual request to get data on to the database server. The same callback module then formats the responses using the "Jiffy" library, sets the appropriate headers and sends the response back to Inets.
 
 HTTPS was chosen over HTTP for the HTTP server due to the handling of users' passwords and potentially other sensitive data, as it would be unwise for this to be travelling unencrypted even between 2 private servers. Certbot/Let's Encrypt was used to generate a SSL certificate for a domain for the database server. Although much of the config was manual, the extra work to set it up minimal and therefore well worth doing.
 
-### MQTT
+### MQTT <a id="MQTT"></a>
+MQTT over SSL is used to communcate between the server and the microcontroller within the hydroponics system.
+While SSL was not strictly necessary, it is still good practice to encrypt any configuration and readings to avoid malicious actors from interfering with the operation of our systems.
 
-### Cloudant <a id="Cloudant"></a>
-Cloudant is a non-relational, JSON document database used to store the node-red flows and settings.  
+The microcontroller connects to a broker and subscribes to the channel `IC.AIHydro/Settings/:SerialNumber:`, to which new configurations for the percentage of the time the LEDs should be on and the desired moisture content of the plants' roots are published by the server.  
+The server connects to the same broker and subscribes the channel "IC.AIHydro/#", wherein messages will be received on the `IC.AIHydro/:SerialNumber:/:Reading` channels, where `SerialNumber` is the serial number of the sending microcontroller (as MQTT messages do not contain information on which client sent them by default), and `Reading` is the reading being published. These readings are parsed and added to the database at the timestamp they are received.
+
+The valid reading channels which can be sent to the server are:  
+`IC.AIHydro/:SerialNumber:/LightLevel`, for the current light level detected by the UV sensor  
+`IC.AIHydro/:SerialNumber:/TDS`, for the current amount of total dissolved solids detected in the system  
+`IC.AIHydro/:SerialNumber:/WaterLevel`, for whether water is currently detected in the reservoir  
+`IC.AIHydro/:SerialNumber:/LightOn`, for whether the LEDs are currently powered
+`IC.AIHydro/:SerialNumber:/PumpOn`, for whether the pump is currently powered
 
 ## User Interface <a id="UI"></a>
 Node-red is used to create a webpage as the user interface. It is a flow-based programming tool built on Node.js, developed by IBM. The node-red app is created and deployed using Cloud Foundry on IBM Cloud.<br/>
