@@ -1,0 +1,333 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ai-hydroponics",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "description": "database",
+      "url": "https://1r.re",
+      "variables": {}
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "BasicAuth" : {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "paths": {
+    "/system/{systemid}/data": {
+      "get": {
+        "security": [{"BasicAuth": []}],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "systemid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "The id of the system to retreive readings for"
+          },
+          {
+            "in": "query",
+            "name": "count",
+            "schema": {
+              "oneOf": [
+                {"type": "integer", "minimum": 0},
+                {"pattern": "all"}
+              ],
+              "default": "all"
+            },
+            "required": false,
+            "description": "The number of items to retreive, starting with the most recent"
+          },
+          {
+            "in": "query",
+            "name": "since",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "required": false,
+            "description": "Only retreive readings from after this unix timestamp"
+          },
+          {
+            "in": "query",
+            "name": "before",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0,
+              "default": 18446744073709551615
+            },
+            "required": false,
+            "description": "Only retreive readings from before this unix timestamp"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {
+                        "type": "integer"
+                      },
+                      "dissolvedSolids": {
+                        "type": "integer"
+                      },
+                      "lightIntensity": {
+                        "type": "integer"
+                      },
+                      "waterLevel": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Successful"
+          },
+          "401": {"description": "Authorisation not supplied"},
+          "403": {"description": "System not registered to user"},
+          "404": {"description": "System ID not found"}
+        },
+        "summary": "Get Readings",
+        "description": "Retreive readings from a given sensor"
+      },
+      "post": {
+        "security": [{"BasicAuth": []}],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "systemid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "The id of the system to add a reading for"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "timestamp": {
+                    "type": "integer"
+                  },
+                  "dissolvedSolids": {
+                    "type": "integer"
+                  },
+                  "lightIntensity": {
+                    "type": "integer"
+                  },
+                  "waterLevel": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {"description": "Successful"},
+          "400": {"description": "Incorrectly formatted query"},
+          "401": {"description": "Authorisation not supplied"},
+          "403": {"description": "System not registered to user"},
+          "422": {"description": "System ID incorrect"}
+        },
+        "summary": "Add Reading",
+        "description": "Add a new reading from a given sensor"
+      }
+    },
+    "/system/{systemid}/settings": {
+      "get": {
+        "security": [{"BasicAuth": []}],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "systemid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "waterWarning": {
+                      "type": "integer"
+                    },
+                    "nutrientWarning": {
+                      "type": "integer"
+                    },
+                    "targetLight": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 86400
+                    },
+                    "targetTds": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 100
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Successful"
+          },
+          "401": {"description": "Authorisation not supplied"},
+          "403": {"description": "System not registered to user"},
+          "404": {"description": "System ID not found"}
+        },
+        "summary": "Settings",
+        "description": "Retreive the current settings of the system"
+      },
+      "patch": {
+        "security": [{"BasicAuth": []}],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "systemid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "waterlevel-warning",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The water level at which a notification will be sent to refill the resevoir"
+          },
+          {
+            "in": "header",
+            "name": "nutrientlevel-warning",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The water level at which a notification will be sent to refill the resevoir"
+          },
+          {
+            "in": "header",
+            "name": "light-level",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 86400
+            },
+            "description": "The number of (equivalent) seconds per day the leds should be on (adjusted for sunlight)"
+          },
+          {
+            "in": "header",
+            "name": "target-nutrients",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "description": "The amount of nutrients which should be in the water"
+          }
+        ],
+        "responses": {
+          "204": {"description": "Successful"},
+          "401": {"description": "Unauthorised"},
+          "403": {"description": "System not registered to user"},
+          "422": {"description": "System ID non-existant"}
+        }
+      }
+    },
+    "/system/{systemid}/ownership": {
+      "patch": {
+        "security": [{"BasicAuth": []}],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "systemid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "202": {"description": "Successful"},
+          "409": {"description": "System already registered"},
+          "422": {"description": "System does not exist"}
+        }
+      },
+      "delete": {
+        "security": [{"BasicAuth": []}],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "systemid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {"description": "Successful"},
+          "409": {"description": "System already registered"},
+          "422": {"description": "System does not exist"}
+        }
+      }
+    },
+    "/user/register": {
+      "put": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "username",
+            "required": true,
+            "schema": {"type": "string"},
+            "description": "The username of the user"
+          },
+          {
+            "in": "header",
+            "name": "password",
+            "required": true,
+            "schema": {"type": "string"},
+            "description": "The password of the user"
+          }
+        ],
+        "responses": {
+          "201": {"description": "Successful"},
+          "409": {"description": "Name in use"}
+        }
+      },
+      "delete": {
+        "security": [{"BasicAuth": []}],
+        "responses": {
+          "204": {"description": "Successful"}
+        }
+      }
+    }
+  }
+}
