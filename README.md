@@ -299,13 +299,20 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 
 ## Meeting Minutes <a id="Meeting"></a>
 
-![image](https://user-images.githubusercontent.com/59923913/176913106-538da6da-5cd9-413a-9bf2-5a1770d026d3.png)
+![image](https://user-images.githubusercontent.com/59923913/176913338-66f7d20e-60b5-42ea-a58f-1d24fa3ed814.png)
+
 ![image](https://user-images.githubusercontent.com/59923913/176884025-70e04a98-7b56-4861-aafc-54c4658fb033.png)
+
 ![image](https://user-images.githubusercontent.com/59923913/176894984-427b2cf7-e787-4396-80d2-43693faab744.png)
+
 ![image](https://user-images.githubusercontent.com/59923913/176884393-16f42c55-adcd-44ba-a32a-05227f7de6f0.png)
+
 ![image](https://user-images.githubusercontent.com/59923913/176884489-8219b357-0181-487b-99b4-e1d15d2fbde7.png)
+
 ![image](https://user-images.githubusercontent.com/59923913/176884607-014992ad-e6e5-4769-82b3-b464b473f886.png)
+
 ![image](https://user-images.githubusercontent.com/59923913/176884676-050faba5-6bde-495c-9689-a82f35e25cba.png)
+
 ![image](https://user-images.githubusercontent.com/59923913/176884729-55d30d0c-831e-4737-ab97-a176b356ed46.png)
 
 ## Gantt Chart <a id="Meeting"></a>
