@@ -301,25 +301,6 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 
 ## Meeting Minutes <a id="Meeting"></a>
 
-Team Meeting 2
-01:00 20/05/2022
-Next Meeting: 02:00 25/05/2022
-Agenda:
-•	State current progress of each submodule
-•	Desired progress for next meeting
-•	Discuss inter-module communication
-
-Submodule	Current Progress	Goals for Next Meeting
-General	Research current systems and technology	Leaflet ideas
-Hardware	Designing hardware frame	Cutting UPVC pipes
-Database	Research	Setup database
-Frontend	Research	Create Node-red app instance
-Voice Recognition	Research	Set up instances on nodered
-Current and future progress
-
-
-
-
 ![image](https://user-images.githubusercontent.com/59923913/176884025-70e04a98-7b56-4861-aafc-54c4658fb033.png)
 
 
