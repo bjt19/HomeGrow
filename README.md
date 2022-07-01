@@ -58,7 +58,22 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
     <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/overall.jpg">
 </p>
 picture of farm <br/>
-3d printed stuff, pipes, anything to do with positioning.
+1.	Measure the overlap distance between the 90° joints & UPVC pipes and tee joints & UPVC pipes <br>
+2.	Drill 4 rectangular holes with the size of 5cm x 5.1cm on each of the 0.5m UPVC pipes <br>
+3.	Measure the diameter of 90° joint <br>
+4.	Drill the hole with a diameter of 68mm on the water reservoir (the diameter of 90° joint) <br>
+5.	Connect the joints with UPVC pipes according to the given configuration <br>
+6.	3D-print the plant holders as given in the figure and install on rectangular holes <br>
+7.	3D-print the pipe stopper given in the figure and install on the free side of UPVC pipes at the top <br>
+8.	3D-print the water level barrier to distribute the water flow evenly. Install this barrier at the joints on the top branch of the system. (The two tee joints and single 90° joint) <br>
+9.	Install the submersible water pump inside the water reservoir. Open two little holes on top of the reservoir lid for this, one for the pump hose and the other for power cable of the motor. Connect the power cable to automation system and hose to the 3D-printed pipe stopper on the free side UPVC pipes at the top. <br>
+10.	Install the water level sensor at the top the reservoir with electronics placed outside for connection to the main system. <br>
+11.	Install the peristaltic pump with one hose inside the nutrient reservoir and the other inside the water reservoir. For this open another small hole on top of the water reservoir specifically for this hose. <br>
+12.	Install the dissolved solid sensor inside the nutrient reservoir. Connect this to the outside electronics sharing the same hole as water sensor power cable. <br>
+13.	Before starting the system, do a test run and check for leakages. If found, hot glue the affected area. (This mostly happens at joint merging points) <br>
+14.	Fill your water & nutrient reservoirs, and plant your seeds in the 3D-printed plant holders <br>
+15.	You are now ready to experiment with hydroponics. Good luck! <br>
+
 
 ## Hardware <a id="Hardware"></a>
 circuit diagram <br/>
