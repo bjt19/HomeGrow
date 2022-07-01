@@ -31,7 +31,7 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 ## Overview of Design <a id="Overview"></a>
 <br/>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/overall_design.PNG">
+    <img src="pictures/overall_design.PNG">
 </p>
 
 ### Bill of Materials <a id="Bom"></a>
@@ -55,21 +55,21 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 
 ## Physical Build <a id="Build"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image016.jpg"> <br>
+    <img src="pictures/image016.jpg"> <br>
     Picture of the Farm <br>
     
     
 </p>
 The system is built using UPVC pipes and putting them in the given configuration in first picture. The lower end of the pipe system is then directed towards a water reservoir which would be the main reservoir for the system's water requiring operations. The reservoir contains the Raspberry Pi and the Mosfet system that is aimed to amplify the required control voltages from 3.3V Raspberry Pi output to each of the electronic items (i.e pumps, LEDs, Sensors) desired operating voltages. Inside the reservoir is the water pump that is tasked to supply the system with water whenever the water sensor detects the water level in the system is low. This motor and sensor are controlled through the GPIO pins present on Raspberry Pi. The nutrients rest in a different container than the main reservoir. The nutrient sensor placed in the main reservoir takes nutrient PPM values as a percentage value and below a certain threshold - specialized for each plant - triggers a second peristaltic pump to pump nurtients from the second container to the reservoir. The whole process is again controlled by the GPIO pins of the Raspberry Pi.<br>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image018.png"> 
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image020.png"> <br>
+    <img src="pictures/image018.png"> 
+    <img src="pictures/image020.png"> <br>
     &emsp;Schematic for Physical System of the Farm &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3D-Printed Plant Holder <br>
     </p>
 In the given arrangement of the pipes LED strips have been put directly on top with a slight angle for each plant to receive as much light as possible in a vertical design. On top of the bottom pipe is a UV sensor which detects values of light emitted from LEDs and customizes it for each plants needs. On the top section of pipes the hose from the main reservoir is attached and sealed with the given 3D printed pipe stopper. On the top layer joints 3D printed water level barriers have been installed to let the water level rise until it can go through the vertical pipes to slow down water and have a controlled current.The vertical pipes have wholes been cut each having 4 holes of dimensions 5x5.1 cm each. The 3D printed plant holders are then placed inside these wholes. The meshed design of the plant holders slow down the dripping water just enough for plants to be submerged without creating any blockages in the system.
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image022.png"> 
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/image024.png"><br>
+    <img src="pictures/image022.png"> 
+    <img src="pictures/image024.png"><br>
     3D-Printed Pipe Stopper&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3D-Printed Water Level Barrier <br><br>
  </p>
 
@@ -136,39 +136,39 @@ A node-red app can be created following [this guide](https://developer.ibm.com/t
 After deploying the flows, the /red in the link can be replaced with /ui to access the dashboard, giving the following display:
 
 <p align="center">
-<img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_home.jpg" width="180" height="395">  <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_notifs.jpg" width="180" height="395"> <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_custom.jpg" width="180" height="395">  <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_chat.jpg" width="180" height="395"> <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/ui_settings.jpg" width="180" height="395">
+<img src="pictures/ui_home.jpg" width="180" height="395">  <img src="pictures/ui_notifs.jpg" width="180" height="395"> <img src="pictures/ui_custom.jpg" width="180" height="395">  <img src="pictures/ui_chat.jpg" width="180" height="395"> <img src="pictures/ui_settings.jpg" width="180" height="395">
 </p>
 
 ### Farm Status Displays <a id="Displays"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/data_display.PNG">
+    <img src="pictures/data_display.PNG">
 </p>
 
 The above flow creates the displays for the current water level, light intensity, nutrient level and duration of light of the farm. There are "inject" and "random" nodes which are used as placeholders for the database during testing, and link nodes which create the connection to the http request flow to get data from the database.
 
 ### Notifications <a id="Notifications"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/notifications.PNG">
+    <img src="pictures/notifications.PNG">
 </p>
 
 The above flow adds notifications to the previous farm status nodes, using the javascript in the "function" nodes alongside the "switch" nodes to create the notification logic, resulting in pop-up notifications and a notification log as shown in the ui images above. The light intensity does not have notifications because light intensity control has not been implemented in the raspberry pi, and the duration of light notification logic is different, because it checks every 24hours if the necessary light has been given to the plant rather than notifying the current condition of the farm.
 
 ### Chat <a id="Chat"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/chat_inputs.PNG">
+    <img src="pictures/chat_inputs.PNG">
 </p>
 
 The above flow creates text and microphone inputs which are then sent to the voice assistant to get a response, and also creates a log of previous messages as shown in the ui image above. 
 
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/settings.PNG">
+    <img src="pictures/settings.PNG">
 </p>
 
 The above flow creates a button input for enabling or disabling the speaker when using the chat.
 
 ### Custom Types <a id="Custom"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/custom_types.PNG">
+    <img src="pictures/custom_types.PNG">
 </p>
 
 
@@ -176,7 +176,7 @@ The above flow contains a "plant selection" list where users can choose one of t
 
 ### Connection Status <a id="Connection"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/connection_status.PNG">
+    <img src="pictures/connection_status.PNG">
 </p>
 
 The above flow is used to check the connection status to the database and farm, if data hasnt been received in 30 minutes, a disconnected notification is triggered, if data is received after, the status is changed to connected.
@@ -229,7 +229,7 @@ A html template node is created with the above CSS code which is applied to the 
 ## Voice Assistant <a id="Assistant"></a>
 
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/voice_recognition.png">
+    <img src="pictures/voice_recognition.png">
 </p>
 
 IBM's Speech-to-Text, Text-to-Speech and Watson Assistant are used to build the voice recognition system. 
@@ -244,7 +244,7 @@ IBM Text-to-Speech is an API cloud service that allows you to convert text to sp
 IBM Watson Assistant uses artificial intelligence to formulate fast, appropriate and accurate responses across any application. By detecting the user's intents, the virtual agent can carry out actions that can be set within the workspace such as responding using dialog that was preset. The main intents for this system are water, light, nutrients and condition as the main application for thie voice recognition feature is for the user to understand the condition of the plants. Possible user examples are added for each intent.
 
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/main/pictures/intents.png">
+    <img src="pictures/intents.png">
 </p>
 
 In the Node-RED flow, user intents are extracted from the Watson Assistant. Based on the intent, the relevant sensor value is extracted from the database and compared against the optimal threshold. For instance, if the user wants to check the light level of the LED lights, the intent 'light' will be detected by Watson Assistant and hence the latest light sensor value is retrieved from the database and checked against the optimal light level needed by the particular type of plant. An appropriate response is given depending on whether there is enough light.
@@ -255,7 +255,7 @@ In the Node-RED flow, user intents are extracted from the Watson Assistant. Base
 
 ### Database <-> Node-red <a id="D2P"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/database_connections.PNG">
+    <img src="pictures/database_connections.PNG">
 </p>
 
 Http request...
@@ -263,7 +263,7 @@ Http request...
 
 ### UI <-> Voice Assistant <a id="U2V"></a>
 <p align="center">
-    <img src="https://github.com/bjt19/HomeGrow/blob/Benjamin/pictures/watson_assitant.PNG">
+    <img src="pictures/watson_assitant.PNG">
 </p>
 
 Nodes for IBMs cloud services are available on node-red, the service credentials are entered into the nodes which are then used to pass the user chat inputs to the speech-to-text and watson assitant to decipher the message's intent, which then replies the user with the farm conditions comparing the data from the database and the optimal values, the reply is in the form of text and also through the speaker using speech-to-text. 
