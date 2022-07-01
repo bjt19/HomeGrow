@@ -91,6 +91,9 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 circuit diagram <br/>
 pi,sensors,pumps,leds
 
+## MQTT <a id="Hardware"></a>
+The sensors are integrated with the whole system through MQTT protocol. A broker is set up online and the Raspberry Pi is setup to send and receive messages from subscribed topics. The database then connects to the broker to receive and store the sensor values. The sensor values are then distributed by the database to the frontend and voice recognition system to implement their functionalities.
+
 ## Database <a id="Database"></a>
 
 The database for the system uses [Mnesia](https://erlang.org/doc/man/mnesia), which allows for effortless data distribution and synchronisation between multiple servers. This is exposed to the front end and the embedded microcontrollers in each hydroponic system using HTTPS and MQTT respectively.
@@ -323,6 +326,8 @@ The vertical farm is constructed from inexpensive UPVC pipes and electronics. Co
 5. Sourcing alternatives to UPVC pipes to have a biodegradable system
 
 ## Meeting Minutes <a id="Meeting"></a>
+
+![image](https://user-images.githubusercontent.com/59923913/176913338-66f7d20e-60b5-42ea-a58f-1d24fa3ed814.png)
 
 ![image](https://user-images.githubusercontent.com/59923913/176884025-70e04a98-7b56-4861-aafc-54c4658fb033.png)
 
