@@ -85,6 +85,9 @@ The product is designed to be space-efficient, water-efficient, and easy to use 
 circuit diagram <br/>
 pi,sensors,pumps,leds
 
+## MQTT <a id="Hardware"></a>
+The sensors are integrated with the whole system through MQTT protocol. A broker is set up online and the Raspberry Pi is setup to send and receive messages from subscribed topics. The database then connects to the broker to receive and store the sensor values. The sensor values are then distributed by the database to the frontend and voice recognition system to implement their functionalities.
+
 ## Database <a id="Database"></a>
 2 databases are used, an Mnesia database and a Cloudant database.
 
