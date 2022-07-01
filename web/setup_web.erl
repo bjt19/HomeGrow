@@ -24,7 +24,8 @@ init_https() ->
     {server_name, "ai-hydro-server"},
     {server_root, "/web"},
     {document_root, "/web/index"},
-    {socket_type, {essl, Ssl_Options}},
+    % Uncomment this line to use HTTPS
+    % {socket_type, {essl, Ssl_Options}},xz
     {modules, [web_callback]}
   ],
   {ok, Pid} = inets:start(httpd, Inets_Options),
