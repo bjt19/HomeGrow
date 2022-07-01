@@ -75,7 +75,7 @@ In the given arrangement of the pipes LED strips have been put directly on top w
 
 ## Hardware <a id="Hardware"></a>
 <p align="center">
-    <img src="pictures/hardware.png"><br>
+    <img src="pictures/hardware2.png"><br>
     The Circuit Diagram
 </p>
 The image above shows the circuit for control over the hardware components. A laptop battery pack is used to provide a 20v dc power supply from mains power. Since the horticulture led strips require a 20v supply, they are connected directly to the voltage rail. The pumps require a lower input voltage of 12V so the LM7912 voltage regulator is connected which takes the input voltage and produces a very stable 12v supply for the pumps. All components need to be controlled by signals from the raspberry pi, to achieve this a mosfet is used with a gate threshold of approximately 2v. The raspberry pi can provide this voltage and turn on each component as required.
